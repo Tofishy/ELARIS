@@ -1,0 +1,195 @@
+/* ---------- WORK ---------- */
+.work-head-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto 20px;
+  width: 100%;
+}
+
+.work-head-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.reel-count {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.filter-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .3s var(--ease);
+}
+
+.filter-btn:hover {
+  color: var(--cream);
+  border-color: var(--amber);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--ember), var(--amber));
+  color: var(--void);
+  border-color: transparent;
+  font-weight: 700;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: transform .4s var(--ease), opacity .3s var(--ease), border-color .4s var(--ease);
+}
+
+.card.hidden-card {
+  display: none;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(242, 145, 79, 0.45);
+}
+
+.card-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.card-bg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+  background: linear-gradient(180deg, rgba(10, 7, 6, 0) 40%, rgba(10, 7, 6, 0.92) 100%);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.56rem;
+  letter-spacing: 0.08em;
+  background: rgba(10, 7, 6, 0.55);
+  padding: 4px 8px;
+  border-radius: 5px;
+  backdrop-filter: blur(3px);
+}
+
+.card-dur {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.56rem;
+  color: var(--cream);
+  background: rgba(10, 7, 6, 0.55);
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.play-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(247, 236, 228, 0.14);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin: auto;
+  border: 1px solid rgba(247, 236, 228, 0.3);
+  opacity: 0;
+  transform: scale(0.7);
+  transition: all .4s var(--ease);
+  font-size: 0.8rem;
+}
+
+.card:hover .play-btn {
+  opacity: 1;
+  transform: scale(1);
+  background: var(--ember);
+  border-color: var(--ember);
+}
+
+.card-title {
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+.card-sub {
+  font-size: 0.65rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* thumbnail image / video-poster support once real media is added */
+.card-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* small badge that shows on cards wired to a real video */
+.card-live {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  display: none;
+  align-items: center;
+  font-size: 0.56rem;
+  letter-spacing: 0.06em;
+  color: var(--amber);
+  background: rgba(10, 7, 6, 0.6);
+  padding: 4px 8px;
+  border-radius: 5px;
+  backdrop-filter: blur(3px);
+}
+
+.card.has-video .card-live {
+  display: inline-flex;
+}

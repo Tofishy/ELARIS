@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELARIS — Video Editing &amp; Graphics Design</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles split by component — same rules as before, just organized -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/panels.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/work.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/video-modal.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="grain"></div>
+
+  <div class="app">
+    <header>
+      <div class="nav-row">
+        <button class="logo display" id="logoBtn">ELARIS</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="links" id="navLinks">
+          <button data-view="about">About</button>
+          <button data-view="work">Samples</button>
+          <button data-view="contact">Contact</button>
+        </nav>
+      </div>
+      <div class="scrubber">
+        <span class="timecode-readout mono" id="timecode">00:00:00:00</span>
+        <div class="scrubber-fill" id="scrubFill">
+          <div class="scrubber-head"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="viewport">
+
+      <section class="panel active" id="view-hero">
+        <canvas id="ember-canvas"></canvas>
+        <div class="panel-inner">
+          <div class="hero-content">
+            <div class="eyebrow mono">NOW BOOKING Q4 PROJECTS</div>
+            <h1 class="display grad-text">ELARIS</h1>
+            <div class="tagline">
+              <span>VIDEO EDITING</span>
+              <span class="sep"></span>
+              <span>GRAPHICS DESIGN</span>
+            </div>
+            <div class="hero-cta">
+              <button class="btn btn-primary" data-view="work">Watch the reel</button>
+              <button class="btn btn-ghost" data-view="contact">Start a project</button>
+            </div>
+            <div class="hero-meta mono" aria-hidden="true">
+              <span>4K · 24FPS</span>
+              <span class="dot">•</span>
+              <span>PRORES 422</span>
+              <span class="dot">•</span>
+              <span>STEREO 48kHz</span>
+              <span class="dot">•</span>
+              <span>COLOR GRADED</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-waveform" id="heroWaveform" aria-hidden="true"></div>
+      </section>
+
+      <section class="panel" id="view-about">
+        <div class="panel-inner">
+          <div class="section-head reveal">
+            <span class="mono">// ABOUT ELARIS</span>
+            <h2>Your vision. <span class="grad-text">Our edit.</span></h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-copy reveal">
+              <p>We turn raw footage into videos that <strong>capture attention</strong> and tell a story. ELARIS specializes in professional video editing and graphic design for creators, businesses, brands, and social media.</p>
+              <p>Clean cuts, engaging transitions, and captions that land — plus motion graphics, sound design, and color work that make every second count.</p>
+              <div class="stat-row">
+                <div class="stat">
+                  <b>120+</b>
+                  <span>PROJECTS DELIVERED</span>
+                </div>
+                <div class="stat">
+                  <b>6</b>
+                  <span>INDUSTRIES SERVED</span>
+                </div>
+                <div class="stat">
+                  <b>48H</b>
+                  <span>AVG. TURNAROUND</span>
+                </div>
+              </div>
+              <div class="tool-strip mono" aria-hidden="true">
+                <span>PREMIERE PRO</span>
+                <span>AFTER EFFECTS</span>
+                <span>DAVINCI RESOLVE</span>
+                <span>PHOTOSHOP</span>
+                <span>ILLUSTRATOR</span>
+              </div>
+            </div>
+            <div class="reveal">
+              <div class="compare-wrap frame-corners">
+                <div class="compare" id="compare">
+                  <div class="compare-layer layer-graded"></div>
+                  <div class="compare-layer layer-raw" id="rawLayer"></div>
+                  <div class="compare-frame">
+                    <span class="badge raw-badge">RAW</span>
+                    <span class="badge">GRADED — ELARIS</span>
+                  </div>
+                  <div class="compare-handle" id="compareHandle"></div>
+                  <div class="rec-tag mono"><span class="rec-dot"></span>REC 00:00:00:00</div>
+                </div>
+              </div>
+              <p class="compare-hint">DRAG TO COMPARE — RAW FOOTAGE VS. THE ELARIS GRADE</p>
+            </div>
+          </div>
+          <div class="mini-timeline reveal">
+            <div class="mt-step">
+              <span class="mt-time mono">00:00</span>
+              <h4>Import</h4>
+              <p>Raw footage &amp; brief in.</p>
+            </div>
+            <div class="mt-step">
+              <span class="mt-time mono">00:12</span>
+              <h4>Assemble</h4>
+              <p>Story structure first.</p>
+            </div>
+            <div class="mt-step">
+              <span class="mt-time mono">00:34</span>
+              <h4>Grade &amp; Design</h4>
+              <p>Color, motion, captions.</p>
+            </div>
+            <div class="mt-step">
+              <span class="mt-time mono">00:51</span>
+              <h4>Sound</h4>
+              <p>Mix, SFX, music.</p>
+            </div>
+            <div class="mt-step">
+              <span class="mt-time mono">01:08</span>
+              <h4>Deliver</h4>
+              <p>Every format, on time.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="view-work">
+        <div class="panel-inner">
+          <div class="work-head-row reveal">
+            <div class="section-head" style="margin-bottom: 0;">
+              <span class="mono">// SELECTED WORK</span>
+              <h2>Samples from the timeline.</h2>
+            </div>
+            <div class="work-head-right">
+              <div class="filters">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="commercial">COMMERCIAL</button>
+                <button class="filter-btn" data-filter="vfx">VFX</button>
+                <button class="filter-btn" data-filter="healthcare">HEALTHCARE</button>
+                <button class="filter-btn" data-filter="events">EVENTS</button>
+                <button class="filter-btn" data-filter="social">SOCIAL</button>
+              </div>
+              <span class="reel-count mono" id="reelCount">08 CLIPS LOADED</span>
+            </div>
+          </div>
+          <div class="work-grid reveal" id="workGrid"></div>
+        </div>
+      </section>
+
+      <section class="panel" id="view-contact">
+        <div class="panel-inner">
+          <div class="contact-grid">
+            <div class="contact-copy reveal">
+              <span class="mono" style="color: var(--ember); letter-spacing: 0.15em; font-size: 0.72rem;">// LET'S CUT SOMETHING GREAT</span>
+              <h2>Have footage?<br>Let's make it move.</h2>
+              <p>Tell us about your project — brand film, product launch, social series, or something we haven't seen yet. We'll reply within one business day.</p>
+              <div class="contact-links">
+                <a href="mailto:elariscreatives.ph@gmail.com">Email <span class="arrow">→ elariscreatives.ph@gmail.com</span></a>
+                <a href="tel:+639086545109">Contact no. <span class="arrow">→ 0908 654 5109</span></a>
+                <a href="https://www.facebook.com/share/1BYtwP9zyZ/" target="_blank" rel="noopener noreferrer">Socials <span class="arrow">→ Facebook</span></a>
+              </div>
+              <div class="status-card">
+                <div class="status-row">
+                  <span class="status-dot"></span>
+                  <span class="mono">AVAILABLE FOR Q4 BOOKINGS</span>
+                </div>
+                <div class="status-bars" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="status-meta mono">
+                  <span>REPLY &lt; 24H</span>
+                  <span>REV. INCLUDED</span>
+                </div>
+              </div>
+            </div>
+            <form class="reveal frame-corners" id="contactForm">
+              <div class="field">
+                <label for="name">NAME</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+              </div>
+              <div class="field">
+                <label for="email">EMAIL</label>
+                <input id="email" name="email" type="email" placeholder="you@company.com" required>
+              </div>
+              <div class="field">
+                <label for="type">PROJECT TYPE</label>
+                <select id="type" name="project_type">
+                  <option>Video editing</option>
+                  <option>Graphics design</option>
+                  <option>Both</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="msg">MESSAGE</label>
+                <textarea id="msg" name="message" placeholder="Tell us about your footage, timeline, and goals."></textarea>
+              </div>
+              <p class="form-status" id="formStatus"></p>
+              <button type="submit" class="btn btn-primary" id="submitBtn">Send message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="mini-footer">
+      <div class="logo display" style="color: var(--ember);">ELARIS</div>
+      <div class="foot-links">
+        <button data-view="about">About</button>
+        <button data-view="work">Samples</button>
+        <button data-view="contact">Contact</button>
+      </div>
+      <div>© 2026 ELARIS STUDIO</div>
+    </footer>
+  </div>
+
+  <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="video-modal-backdrop" id="videoModalBackdrop"></div>
+    <div class="video-modal-inner frame-corners">
+      <button class="video-modal-close" id="videoModalClose" aria-label="Close video">✕</button>
+      <div class="video-modal-media" id="videoModalMedia"></div>
+      <div class="video-modal-info">
+        <div>
+          <div class="video-modal-title" id="videoModalTitle"></div>
+          <div class="video-modal-sub mono" id="videoModalSub"></div>
+        </div>
+        <span class="video-modal-tag mono" id="videoModalTag"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Scripts split by component. Order matters: samples-data.js must load
+       before work-grid.js (it uses the samples array + svgFor immediately),
+       and video-modal.js defines openVideoModal() that work-grid.js calls. -->
+  <script src="js/ember-field.js"></script>
+  <script src="js/hero-waveform.js"></script>
+  <script src="js/view-switcher.js"></script>
+  <script src="js/compare-slider.js"></script>
+  <script src="js/samples-data.js"></script>
+  <script src="js/video-modal.js"></script>
+  <script src="js/work-grid.js"></script>
+  <script src="js/contact-form.js"></script>
+</body>
+</html>

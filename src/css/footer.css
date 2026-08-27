@@ -1,0 +1,47 @@
+/* ---------- FOOTER ---------- */
+footer.mini-footer {
+  flex: 0 0 auto;
+  height: var(--footer-h);
+  padding: 0 clamp(20px, 4vw, 50px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  gap: 14px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  background: var(--void);
+}
+
+footer.mini-footer .logo {
+  font-size: 0.85rem;
+}
+
+.foot-links {
+  display: flex;
+  gap: 16px;
+}
+
+.foot-links button {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-family: 'Manrope', sans-serif;
+  transition: color .3s;
+  padding: 0;
+}
+
+.foot-links button:hover {
+  color: var(--amber);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}

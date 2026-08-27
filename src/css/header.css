@@ -1,0 +1,109 @@
+/* ---------- HEADER ---------- */
+header {
+  flex: 0 0 auto;
+  z-index: 100;
+  background: var(--void);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px clamp(20px, 4vw, 50px) 12px;
+}
+
+.logo {
+  font-size: 1.3rem;
+  color: var(--ember);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+nav.links {
+  display: flex;
+  gap: 10px;
+}
+
+nav.links button {
+  text-decoration: none;
+  color: var(--cream);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--ember), var(--amber));
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), filter .35s var(--ease);
+  white-space: nowrap;
+}
+
+nav.links button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 67, 47, 0.35);
+  filter: brightness(1.08);
+}
+
+nav.links button.active {
+  box-shadow: 0 0 0 2px var(--cream) inset;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 2px;
+  background: var(--cream);
+  border-radius: 2px;
+}
+
+.scrubber {
+  height: 3px;
+  background: rgba(247, 236, 228, 0.08);
+  position: relative;
+  margin: 25px clamp(20px, 4vw, 50px) 10px;
+  border-radius: 2px;
+}
+
+.scrubber-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--ember), var(--amber));
+  border-radius: 2px;
+  position: relative;
+  transition: width .5s var(--ease);
+}
+
+.scrubber-head {
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 10px var(--ember);
+}
+
+.timecode-readout {
+  position: absolute;
+  top: -17px;
+  right: clamp(20px, 4vw, 50px);
+  font-size: 0.68rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
