@@ -28,9 +28,8 @@ const samples = [
   { cat: 'healthcare', title: 'Co. Lab Health', sub: 'Brand film — healthcare', dur: '01:07', grad: ['#123832', '#0a0706'], accent: '#5fd6c4', icon: 'M12 24 h8 l4 -12 l6 24 l4 -12 h10', thumb: 'thumb/CollabT.png', video: 'Videos/collab.mp4' },
   { cat: 'social', title: 'Social Reels', sub: 'Educational Content', dur: '00:20', grad: ['#101018', '#0a0706'], accent: '#8f8ff2', icon: 'M24 8 L30 20 L24 20 L28 40 L18 22 L24 22 Z', thumb: 'thumb/reel2T.png', video: 'Videos/reel2.mp4'},
   { cat: 'social', title: 'Social Reels', sub: 'Funny Reels', dur: '00:21', grad: ['#0e1420', '#0a0706'], accent: '#6fa8f2', icon: 'M10 30 a6 6 0 1 0 0.01 0 M30 16 a4 4 0 1 0 0.01 0 M36 34 a5 5 0 1 0 0.01 0', thumb: 'thumb/reel3T.png', video: 'Videos/reel3.mp4'},
-  { cat: 'social', title: 'Social Reels', sub: 'Reel Content', dur: '00:56', grad: ['#241010', '#0a0706'], accent: '#e8432f', icon: 'M24 6 v36 M14 14 h20 M14 34 h20', thumb: 'thumb/reel4T.png', video: 'Videos/reel4.mp4' },
-  { cat: 'commercial', title: 'Solea Lumière', sub: 'Drinks Content', dur: '00:36', grad: ['#171313', '#0a0706'], accent: '#f2914f', icon: 'M24 8 a10 10 0 1 0 0.01 0 M14 44 a10 10 0 0 1 20 0', thumb: 'thumb/Solea2T.png',video:'Videos/Solea2.mp4'},
   { cat: 'social', title: 'Social Reels', sub: 'Educational Content', dur: '00:36', grad: ['#171313', '#0a0706'], accent: '#f2914f', icon: 'M24 8 a10 10 0 1 0 0.01 0 M14 44 a10 10 0 0 1 20 0', thumb: 'thumb/newreel2T.png', video: 'Videos/newreel.mp4'},
+  { cat: 'social', title: 'Curb', sub: 'Commercial', dur: '00:33', grad: ['#2a2320', '#0a0706'], accent: '#f2914f', icon: 'M32 8 L40 24 L32 40 L24 24 Z', thumb: 'thumb/curb2T.png', video: 'Videos/curb2.mp4'},
 
 ];
 
